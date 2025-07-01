@@ -1,34 +1,55 @@
-# FalseGuard – AI-powered Misleading News Detector
+# 🛡️ FalseGuard – AI-Powered Fake News Detection Tool
 
-This is the full codebase for FalseGuard, a web app that uses AI to detect misleading news from articles, PDFs, and images.
+**FalseGuard** is an AI-powered web application designed to help users detect and understand misleading or potentially fake news in real-time. It supports both text input and file uploads (PDFs & images), with advanced reasoning, evidence sourcing, and a polished dark mode UI.
 
-## Tech Stack
-- Frontend: Next.js (App Router), TypeScript, ShadCN, Tailwind
-- Backend: Firebase
-- AI: Google Genkit + Gemini 2.0 Flash
-- Search: Tavily AI Search API
+---
 
-## Deployment
-This project is hosted on Firebase: [Live Site](https://falseguard.web.app)
+## 🚀 Features
 
-## To Run Locally
-1. Clone the repo
-2. `npm install`
-3. Set up your Search API Key (see below)
-4. `npm run dev`
+### 📰 Article Analysis
+- Paste any news article or headline.
+- Classifies content as **Real** or **Fake**.
+- Provides **explanations** for its decision.
+- Uses **Tavily Search API** to search the web and gather **real-time supporting links** for fact-checking.
 
-## Real-Time Web Search Setup (Tavily API)
+### 📄 PDF/Image Analysis
+- Upload PDFs or images (e.g., screenshots of posts).
+- Detects misinformation or content manipulation.
+- Ask questions like:
+  - *"Summarize this document."*
+  - *"Is this logo authentic?"*
 
-This project uses the [Tavily Search API](https://tavily.com/) to find real-time supporting articles from the web.
+### 🧠 AI Technology
+- Powered by **CNN and AI connected to CNN** for classification, reasoning, and content analysis.
+- Real-time evidence sourcing via Tavily search integration.
 
-1.  **Get a free API Key:** Go to [tavily.com](https://tavily.com/) and sign up for a free account to get your API key.
-2.  **Set the API Key:** Create a file named `.env` in the root of the project (if it doesn't exist) and add your key like this:
+### 🎨 UI/UX
+- Built with **Next.js (App Router)**, **React**, and **TypeScript**
+- Styled with **ShadCN UI** and **Tailwind CSS**
+- Fully responsive with support for **dark mode**
 
-    ```
-    TAVILY_API_KEY=your_api_key_here
-    ```
-The app will now use live web search results for its analysis.
+---
 
-## Firebase Setup
-- firebase.json and .firebaserc are included
-- You can deploy using `firebase deploy`
+## ⚙️ Tech Stack
+
+| Area        | Tools & Frameworks                                  |
+|-------------|------------------------------------------------------|
+| Frontend    | Next.js, React, TypeScript, Tailwind CSS, ShadCN UI |
+| Backend     | AI Integration (CNN), Tavily Search API             |
+| File Support| PDF/Image upload & analysis                         |
+| Utilities   | Error Handling, Realtime Search, Dark Mode          |
+
+---
+
+## 🛠️ How to Run Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/Atlasdestroyer859/falseguard.git
+cd falseguard
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
